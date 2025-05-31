@@ -1,0 +1,155 @@
+@use './variables' as vars;
+
+.nav{
+    z-index: 10 !important;
+    position: sticky;
+    top: 0;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    background-color: vars.$light-color;
+
+
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+    }
+
+    &__title{
+        flex: 1;
+        display: flex;
+    }
+
+    &__header{
+        color: vars.$primary-color;
+        font-family: titr;
+        font-size: 2.5rem;
+        padding: 0 1rem;
+        text-decoration: none !important;
+
+    }
+
+    &__search{
+        margin: 0.5rem 0;
+        padding: 0.3rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        background-color: vars.$smooth-color;
+        cursor: pointer;
+        color: vars.$dark-color;
+        text-decoration: none;
+
+    }
+
+
+    &__svg{
+        padding:0 0.5rem;
+    }
+
+    &__cart{
+        flex: 7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+
+    &__basket{
+        position: relative;
+        cursor: pointer;
+        display: flex;
+
+        a{
+            margin: 0 0.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+
+        span{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 0.6em;
+            background-color: vars.$primary-color;
+            padding: 0.1rem 0.3rem;
+            border-radius: 1rem;
+            color: vars.$white-color;
+        }
+    }
+}
+
+.categories{
+    background-color: vars.$smooth-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+
+    &__item{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: vars.$dark-color;
+
+        .list{
+            justify-content: start;
+
+            a{
+
+                &:hover{
+                    svg{
+                        color: vars.$primary-color;
+                    }
+                }
+            }
+        }
+
+        .blog{
+            background-color: vars.$smooth-primary-color;
+            color: vars.$primary-color;
+            border-radius: 3rem;
+            display: flex;
+            align-items: center;
+            padding: 0.3rem 0.5rem;
+        }
+
+       
+
+        svg,h4{
+            margin: 0 0.2rem;
+            cursor: pointer;
+        }
+        
+        b{
+            margin: 0 0.5rem;
+        }
+
+        .bi-list{
+            color: vars.$dark-color !important;
+        }
+
+        span{
+            margin: 0 0.2rem;
+        }
+        a{
+            margin-left:1rem ; 
+        }
+    }
+}
+
+#cart__span{
+    position: relative;
+
+    span{
+        position: absolute;
+        top: 0.8rem;
+        font-size: 0.6em;
+        background-color: vars.$primary-color;
+        padding: 0.1rem 0.3rem;
+        border-radius: 1rem;
+        color: vars.$white-color;
+    }
+}
