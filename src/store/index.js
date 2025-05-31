@@ -1,9 +1,25 @@
 import { createStore } from "vuex";
+import products from "./products";
+import carts from "./carts";
 
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  state:{
+    tab : "home",
+    searchHistory:[]
+  },
+  getters:{
+    addToSearchHistory: (state) => (search) =>{
+      state.searchHistory.push(search);
+    }
+  },
+  mutations:{
+    changeTab(state , newTab){
+      state.tab = newTab
+
+  }
+  },
+  modules: {
+    products,
+    carts,
+  },
 });
